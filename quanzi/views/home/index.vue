@@ -23,6 +23,7 @@
     flex-direction: column;
     &>div{
         flex: 1;
+        overflow: scroll;
     }
     footer{
         height: 1rem;
@@ -30,6 +31,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-top: 1px solid #999;
+        box-sizing: border-box;
     }
     i{
         font-size: .4rem;

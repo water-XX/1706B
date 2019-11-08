@@ -4,8 +4,9 @@ import Logger from 'vuex/dist/logger'
 
 Vue.use(Vuex)
 
-import timeline from './modules/timeline';
-import replyModal from './modules/replyModal';
+
+// import timeline from './modules/timeline';
+// import replyModal from './modules/replyModal';
 
 export default new Vuex.Store({
   state: {
@@ -15,8 +16,8 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    timeline,
-    replyModal
+    // timeline,
+    // replyModal
   },
   plugins: [Logger()]
 })

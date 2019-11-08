@@ -1,9 +1,6 @@
   
 <template>
     <div class="logbox">
-        <div class="header">
-            <p>圈子登录</p>
-        </div>
         <div class="main">
             <input type="text" placeholder="用户名" v-model="userName" @blur="checkUserName">
             <input type="password" placeholder="登录密码" v-model="userPwd">
@@ -28,14 +25,14 @@ export default {
             let result = await login({userName, userPwd});
             console.log('result...', result);
             if (result && result.data.code === 1){
-                // 登陆完成，执行后续跳转逻辑
                 window.sessionStorage.setItem('isLogin', 'true');
+                this.$router.replace('/');
             }
-            alert(result.data.msg);
+            this.$toast(result.data.msg);
         },
         checkUserName(){
-            if (!/\w{3, 20}/.test(this.userName)){
-                alert('请输入正确的用户名')
+            if (!/\w{3,20}/.test(this.userName)){
+                this.$toast('请输入正确的用户名');
             }
         }
     }
@@ -67,6 +64,7 @@ export default {
             margin-left: .2rem;
             border: none;
             background: #f2f2f2;
+            font-size: .3rem;
         }
         button{
             width: 7rem;
@@ -75,6 +73,7 @@ export default {
             border: none;
             background: #f76968;
             color: #fff;
+            font-size: .3rem;
         }
         a{
             display: block;

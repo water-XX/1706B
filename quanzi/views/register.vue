@@ -66,6 +66,7 @@ export default {
             margin-left: .2rem;
             border: none;
             background: #f2f2f2;
+            font-size:.3rem;
         }
         button{
             width: 7rem;
@@ -74,6 +75,7 @@ export default {
             border: none;
             background: #f76968;
             color: #fff;
+            font-size:.3rem;
         }
         a{
             display: block;
