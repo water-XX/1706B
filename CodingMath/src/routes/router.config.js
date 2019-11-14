@@ -1,5 +1,7 @@
-
 import IndexPage from '@/views/IndexPage'
+
+import GovList from '@/views/main/gov/index'
+import NewGov from '@/views/main/gov/new'
 
 
 export default {
@@ -7,9 +9,14 @@ export default {
     component: IndexPage,
     path: '/main',
     children: [
+   
+    {
+      path: '/main/govList',
+      component: GovList,
+    },
     {
       path: '/main/addGov',
-      component: ()=><p>新增机构页面</p>,
+      component: NewGov,
     },{
       path: '/main/editGov/:id?',
       component: ()=><p>编辑机构</p>,
@@ -45,6 +52,10 @@ export default {
     title: '机构管理',
     icon: '',
     children: [{
+      title: '机构列表',
+      path: '/main/govList',
+      show: true
+    },{
       title: '新增机构',
       path: '/main/addGov',
       show: true
