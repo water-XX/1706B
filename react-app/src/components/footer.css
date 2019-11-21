@@ -1,0 +1,15 @@
+footer{
+    width: 27rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    background:skyblue;
+    
+}
+footer a{
+    flex: 1;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+}
